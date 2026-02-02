@@ -1,4 +1,6 @@
-export const udajeTurnaja = {
+import type { UdajeTurnaja } from "@/types/udajeTurnaja";
+
+export const udajeTurnaja: UdajeTurnaja = {
   nazov: "Spiško Cup – Turnaj",
   organizator: "HK Spišská Nová Ves mládež",
   miesto: "Zimný štadión Spišská Nová Ves",
@@ -9,19 +11,19 @@ export const udajeTurnaja = {
       meno: "Lukáš Laškody",
       tel: "0910 183 208",
       email: "mladez@hksnv.sk",
-      funkcia: "šéftréner"
+      funkcia: "šéftréner",
     },
     veduci: {
-      meno: "Ivan Berthóty", 
+      meno: "Ivan Berthóty",
       tel: "0944 237 350",
       email: "ivanberthoty@gmail.com",
-      funkcia: "vedúci"
-    }
+      funkcia: "vedúci",
+    },
   },
   startovne: {
     cena: "585 €",
     iban: "SK91 1100 0000 0029 1863 8656",
-    terminUhrady: "20. 3. 2026"
+    terminUhrady: "20. 3. 2026",
   },
   vCeneStartovneho: [
     "Prenájom ľadovej plochy",
@@ -29,11 +31,13 @@ export const udajeTurnaja = {
     "Časomiera",
     "Lekárska služba",
     "Pitný režim a ovocie pre všetky tímy",
-    "Trofeje, medaile, ocenenia"
+    "Trofeje, medaile, ocenenia",
   ],
-  stravne: "2 x obed (sobota, nedeľa), 1 x večera (sobota), 1 x raňajky (nedeľa)",
+  stravne:
+    "2 x obed (sobota, nedeľa), 1 x večera (sobota), 1 x raňajky (nedeľa)",
   ubytovanie: "1 noc",
-  poznamka: "V cene štartovného za tím nie je zahrnuté ubytovanie, stravné a uhradí sa na mieste. Dopravu si zabezpečuje každý tím svojpomocne.",
+  poznamka:
+    "V cene štartovného za tím nie je zahrnuté ubytovanie, stravné a uhradí sa na mieste. Dopravu si zabezpečuje každý tím svojpomocne.",
   podpis: "S pozdravom Lukáš Laškody",
   timy: [
     { skupina: "A", tim: "S" },
@@ -41,6 +45,6 @@ export const udajeTurnaja = {
     { skupina: "C", tim: "I" },
     { skupina: "D", tim: "Š" },
     { skupina: "E", tim: "K" },
-    { skupina: "F", tim: "O" }
-  ]
-} as const;
+    { skupina: "F", tim: "O" },
+  ],
+};

@@ -1,29 +1,39 @@
 "use client";
 
-import Image from "next/image";
 import { udajeTurnaja } from "@/lib/udajeTurnaja";
+import { ZnackaOrganizatora } from "@/components/ZnackaOrganizatora";
 
 export function Paticka() {
   return (
-    <footer className="bg-blue-900 text-white py-8">
-      <div className="max-w-5xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="text-center md:text-left mb-4 md:mb-0">
-            <p className="text-lg font-medium mb-2">{udajeTurnaja.podpis}</p>
-            <p className="text-blue-200">
-              Organizátor: {udajeTurnaja.organizator}
+    <footer className="bg-primary text-primary-foreground py-12 md:py-16">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          {/* Textová časť */}
+          <div className="text-center lg:text-left space-y-4">
+            <p className="text-lg md:text-xl font-medium">
+              {udajeTurnaja.podpis}
             </p>
+            <div className="space-y-2">
+              <p className="text-primary-foreground/80">
+                Organizátor: {udajeTurnaja.organizator}
+              </p>
+              <p className="text-primary-foreground/60 text-sm">
+                Spišská Nová Ves
+              </p>
+            </div>
           </div>
 
-          <div className="flex items-center space-x-4">
-            <Image
-              src="/logo_hksnv.webp"
-              alt="HK Spišská Nová Ves logo"
-              width={40}
-              height={40}
-              className="h-10 w-auto opacity-80"
-            />
+          {/* Logo */}
+          <div className="flex items-center">
+            <ZnackaOrganizatora velkost="medium" />
           </div>
+        </div>
+
+        {/* Bottom border */}
+        <div className="mt-8 pt-8 border-t border-primary/30">
+          <p className="text-center text-primary-foreground/60 text-sm">
+            © 2026 {udajeTurnaja.organizator}. Všetky práva vyhradené.
+          </p>
         </div>
       </div>
     </footer>

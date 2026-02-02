@@ -1,45 +1,73 @@
 "use client";
 
-import Image from "next/image";
-import { udajeTurnaja } from "@/lib/udajeTurnaja";
+import { ZnackaOrganizatora } from "@/components/ZnackaOrganizatora";
 
 export function Hlavicka() {
   return (
-    <header className="bg-white shadow-sm border-b border-gray-100 sticky top-0 z-50">
-      <div className="max-w-5xl mx-auto px-4 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-4">
-            <Image
-              src="/logo_hksnv.webp"
-              alt="HK Spišská Nová Ves logo"
-              width={48}
-              height={48}
-              className="h-12 w-auto"
-            />
-            <div>
-              <h1 className="text-xl font-bold text-blue-900">
-                Spišská Nová Ves
-              </h1>
-              <p className="text-sm text-gray-600">{udajeTurnaja.nazov}</p>
-            </div>
-          </div>
+    <header className="sticky top-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo a organizátor */}
+          <ZnackaOrganizatora velkost="small" />
 
-          <nav className="hidden md:flex space-x-6">
+          {/* Desktop navigácia */}
+          <nav className="hidden lg:flex items-center space-x-8">
             <a
               href="#prehlad"
-              className="text-gray-700 hover:text-blue-700 font-medium transition-colors"
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors text-sm"
             >
               Prehľad
             </a>
             <a
               href="#balik"
-              className="text-gray-700 hover:text-blue-700 font-medium transition-colors"
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors text-sm"
             >
-              Balík
+              Cenový balík
             </a>
             <a
               href="#timy"
-              className="text-gray-700 hover:text-blue-700 font-medium transition-colors"
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors text-sm"
+            >
+              Tímy
+            </a>
+          </nav>
+
+          {/* Mobile menu button */}
+          <div className="lg:hidden">
+            <button className="p-2 rounded-md text-foreground/60 hover:text-foreground hover:bg-muted transition-colors">
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path d="M4 6h16M4 12h16M4 18h16"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile navigácia */}
+        <div className="lg:hidden border-t border-border py-4">
+          <nav className="flex flex-col space-y-3">
+            <a
+              href="#prehlad"
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors text-sm py-2"
+            >
+              Prehľad
+            </a>
+            <a
+              href="#balik"
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors text-sm py-2"
+            >
+              Cenový balík
+            </a>
+            <a
+              href="#timy"
+              className="text-foreground/80 hover:text-foreground font-medium transition-colors text-sm py-2"
             >
               Tímy
             </a>
