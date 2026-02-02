@@ -1,6 +1,6 @@
 "use client";
 
-import { ZnackaOrganizatora } from "@/components/src/components/ZnackaOrganizatora";
+import { ZnackaOrganizatora } from "@/components/ZnackaOrganizatora";
 
 export function Hlavicka() {
   return (

@@ -1,7 +1,7 @@
 "use client";
 
 import { udajeTurnaja } from "@/lib/udajeTurnaja";
-import { ZnackaOrganizatora } from "@/components/src/components/ZnackaOrganizatora";
+import { ZnackaOrganizatora } from "@/components/ZnackaOrganizatora";
 
 export function Paticka() {
   return (

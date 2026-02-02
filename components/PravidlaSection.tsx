@@ -1,8 +1,8 @@
 "use client";
 
-import { Sekcia } from "@/components/src/components/Sekcia";
-import { Zoznam } from "@/components/src/components/Zoznam";
-import { InfoBox } from "@/components/src/components/InfoBox";
+import { Sekcia } from "@/components/Sekcia";
+import { Zoznam } from "@/components/Zoznam";
+import { InfoBox } from "@/components/InfoBox";
 import { udajeTurnaja } from "@/lib/udajeTurnaja";
 import { Clock, Trophy, Users, AlertTriangle } from "lucide-react";
 

@@ -1,5 +1,5 @@
-import { Sekcia } from "@/components/src/components/Sekcia";
-import { KartaUdaja } from "@/components/src/components/KartaUdaja";
+import { Sekcia } from "@/components/Sekcia";
+import { KartaUdaja } from "@/components/KartaUdaja";
 import { udajeTurnaja } from "@/lib/udajeTurnaja";
 import { DollarSign, Calendar, Building2, UserPlus } from "lucide-react";
 
