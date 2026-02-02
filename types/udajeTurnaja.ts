@@ -16,11 +16,18 @@ export interface Tim {
   tim: string;
 }
 
+export interface HraciSystem {
+  system: string;
+  hraciCas: string;
+  body: readonly string[];
+}
+
 export interface UdajeTurnaja {
   nazov: string;
   organizator: string;
   miesto: string;
   datum: string;
+  terminPrihlasky: string;
   kategoria: string;
   kontakt: {
     hlavny: Kontakt;
@@ -32,5 +39,9 @@ export interface UdajeTurnaja {
   ubytovanie: string;
   poznamka: string;
   podpis: string;
+  hraciSystem: HraciSystem;
+  specialnePravidla: readonly string[];
+  sutazZrucnosti: string;
+  organizacnePokyny: readonly string[];
   timy: readonly Tim[];
 }
